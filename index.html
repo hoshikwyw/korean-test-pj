@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TagoPlus</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!--------------------- navbar section  --------------------->
+
+    <section id="navbar">
+      <div id="navbar-container">
+        <div class="logo">
+          <a href="#">TagoPlus</a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#">서비스소개</a></li>
+          <li><a href="#">퍼블리싱의뢰</a></li>
+          <li><a href="#">포트폴리오</a></li>
+          <li><a href="#">고객센터</a></li>
+          <li class="last-link">
+            <a href="#"
+              ><img src="./imgs/main-4.png" alt="contact-img" />마이페이지</a
+            >
+          </li>
+          <div class="navbar-buttons">
+            <button class="logIn"><a href="#">로그인</a></button>
+            <button class="register"><a href="#">회원가입</a></button>
+          </div>
+        </ul>
+        <button class="burger-btn" onclick="toggleNavbar()">
+          <svg
+            class="burger"
+            xmlns="http://www.w3.org/2000/svg"
+            width="35"
+            height="35"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#000000"
+            stroke-width="2"
+            stroke-linecap="square"
+            stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </section>
+
+    <!--------------------- sidebar section  --------------------->
+
+    <div id="sidebar" class="sidebar">
+      <div class="sidebar-container">
+        <div class="logo">
+          <a href="#">TagoPlus</a>
+          <button class="burger-btn" onclick="toggleNavbar()">
+            <svg
+              class="cross"
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="25"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#000000"
+              stroke-width="2" 
+              stroke-linecap="square"
+              stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <hr />
+        <ul class="sidebar-nav-links">
+          <li><a href="#">서비스소개</a></li>
+          <li><a href="#">퍼블리싱의뢰</a></li>
+          <li><a href="#">포트폴리오</a></li>
+          <li><a href="#">고객센터</a></li>
+          <li class="last-link">
+            <a href="#"
+              ><img src="./imgs/main-4.png" alt="contact-img" />마이페이지</a
+            >
+          </li>
+          <div class="navbar-buttons">
+            <button class="logIn"><a href="#">로그인</a></button>
+            <button class="register"><a href="#">회원가입</a></button>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+    <!--------------------- header section  --------------------->
+
+    <section id="header">
+      <div class="main-container">
+        <div class="header-container">
+          <div class="slider">
+            <div class="content-container slide1 slides active">
+              <img
+                class="bg-decoration"
+                src="./imgs/main-15.png"
+                alt="bg-decoration" />
+              <div class="text-container">
+                <h2 class="subtitle">복잡한 퍼블리싱 이젠</h2>
+                <h2 class="title">전문가에게 맡기세요!</h2>
+              </div>
+              <img
+                src="./imgs/main-16.png"
+                alt="header-img"
+                class="header-img" />
+            </div>
+            <div class="content-container slide2 slides">
+              <img
+                class="bg-decoration"
+                src="./imgs/main-15.png"
+                alt="bg-decoration" />
+              <div class="text-container">
+                <h2 class="subtitle">복잡한 퍼블리싱 이젠</h2>
+                <h2 class="title">전문가에게 맡기세요!</h2>
+              </div>
+              <img
+                src="./imgs/main-16.png"
+                alt="header-img"
+                class="header-img" />
+            </div>
+            <div class="content-container slide3 slides">
+              <img
+                class="bg-decoration"
+                src="./imgs/main-15.png"
+                alt="bg-decoration" />
+              <div class="text-container">
+                <h2 class="subtitle">복잡한 퍼블리싱 이젠</h2>
+                <h2 class="title">전문가에게 맡기세요!</h2>
+              </div>
+              <img
+                src="./imgs/main-16.png"
+                alt="header-img"
+                class="header-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button id="prev" class="prev">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="52"
+          height="52"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="2"
+          stroke-linecap="square"
+          stroke-linejoin="round">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+      <button id="next" class="next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="52"
+          height="52"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="2"
+          stroke-linecap="square"
+          stroke-linejoin="round">
+          <path d="M9 18l6-6-6-6" />
+        </svg>
+      </button>
+      <div class="dots-container">
+        <div class="dot active" attr="0" onclick="switchSlide(this)"></div>
+        <div class="dot" attr="1" onclick="switchSlide(this)"></div>
+        <div class="dot" attr="2" onclick="switchSlide(this)"></div>
+      </div>
+    </section>
+
+    <!--------------------- progress section  --------------------->
+
+    <section id="progress">
+      <!--------------------- progress left side  --------------------->
+
+      <div class="progress-left">
+        <h2 class="text-background">ing</h2>
+        <h2 class="progress-left-text">진행중인 프로젝트</h2>
+      </div>
+
+      <!--------------------- progress right side 보헤미안 --------------------->
+
+      
+      <div class="progress-right progress-container">
+         <!-- 1st progress  -->
+        <div class="circle-resize">
+          <div class="first-progress progress-wrap">
+            <div class="progress">
+              <!-- color part  -->
+              <div class="mask half">
+                <div class="fill"></div>
+              </div>
+              <div class="mask full">
+                <div class="fill"></div>
+              </div>
+              <div class="value-container">85%</div>
+            </div>
+          </div>
+          <div class="progress-caption">
+            <h2 class="title">여성의류 쇼핑몰 보헤미안</h2>
+            <button class="btn-text">계약완료</button>
+          </div>
+        </div>
+
+        <!-- 2nd progress  -->
+        <div class="circle-resize">
+          <div class="second-progress progress-wrap">
+            <div class="progress">
+              <!-- color part  -->
+              <div class="mask half">
+                <div class="fill2"></div>
+              </div>
+              <div class="mask full2">
+                <div class="fill2"></div>
+              </div>
+
+              <div class="value-container">70%</div>
+            </div>
+          </div>
+          <div class="progress-caption">
+            <h2 class="title">강남 맑은 치과</h2>
+            <button class="btn-text">접수완료</button>
+          </div>
+        </div>
+
+        <!-- 3rd progress  -->
+        <div class="circle-resize">
+          <div class="third-progress progress-wrap">
+            <div class="progress">
+              <!-- color part  -->
+              <div class="mask half">
+                <div class="fill3"></div>
+              </div>
+              <div class="mask full3">
+                <div class="fill3"></div>
+              </div>
+              <div class="value-container">63%</div>
+            </div>
+          </div>
+          <div class="progress-caption">
+            <h2 class="title">현대지에프홀딩스</h2>
+            <button class="btn-text">접수중</button>
+          </div>
+        </div>
+
+        </div>
+      
+    </section>
+
+    <!--------------------- projects section  --------------------->
+
+    <section id="projects">
+      <div class="first-pj pj-container">
+        <div class="text-container">
+          <h2 class="pj-text">총계약된 프로젝트</h2>
+          <h2 class="pj-number" data-val="2580">0<span>건</span></h2>
+        </div>
+        <img src="./imgs/main-48.png" alt="pj1" class="pj-image pic1" />
+      </div>
+      <div class="second-pj pj-container">
+        <div class="text-container">
+          <h2 class="pj-text">현재 진행중인 프로젝트</h2>
+          <h2 class="pj-number" data-val="1358 ">0<span>건</span></h2>
+        </div>
+        <img src="./imgs/main-52.png" alt="pj2" class="pj-image pic2" />
+      </div>
+      <div class="third-pj pj-container">
+        <div class="text-container">
+          <h2 class="pj-text">완료된 프로젝트</h2>
+          <h2 class="pj-number" data-val="1752">0 <span>건</span></h2>
+        </div>
+        <img src="./imgs/main-58.png" alt="pj3" class="pj-image pic3" />
+      </div>
+    </section>
+
+    <!--------------------- project intro section  --------------------->
+
+    <section id="project-intro">
+      <div class="text-container">
+        <h1 class="service-text">서비스소개</h1>
+        <p class="text-area">
+          누적 거래 402만 건! 700여 개의 카테고리와 6만여 개 서비스에서 필요한
+          모든 전문가를 만나보세요.
+        </p>
+        <button>
+          자세히 보기
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="#666666"
+              stroke-width="2"
+              stroke-linecap="square"
+              stroke-linejoin="round">
+              <path d="M9 18l6-6-6-6" />
+            </svg>
+          </span>
+        </button>
+      </div>
+      <img src="./imgs/main-63.png" alt="service-image" class="service-image" />
+    </section>
+
+    <!--------------------- youtube section  --------------------->
+
+    <section id="youtube-section">
+      <div class="content-container">
+        <div class="text-container">
+          <h2>유튜브 홍보용 영상</h2>
+          <p>누적 거래 402만 건!</p>
+          <p>700여 개의 카테고리와 6만여 개 서비스에서</p>
+          <p>필요한 모든 전문가를 만나보세요.</p>
+        </div>
+        <img
+          src="./imgs/main-74.png"
+          alt="youtube-image"
+          class="youtube-image" />
+      </div>
+    </section>
+
+    <!--------------------- feedback section --------------------->
+
+    <section id="feedback-container">
+      <!-------- feedback left side  --------->
+
+      <div class="feedback-left">
+        <div class="heading">
+          <h3>이용후기</h3>
+          <h4>
+            더보기<span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#666666"
+                stroke-width="2"
+                stroke-linecap="square"
+                stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </span>
+          </h4>
+        </div>
+        <div class="review-card-container">
+          <div class="review-card">
+            <div class="image-section">
+              <img src="./imgs/main-78.png" alt="" />
+              <h2 class="name">김*국</h2>
+            </div>
+            <p class="comment">
+              복잡한 코딩 한번에 해결했어요 너무 감사합니다.
+            </p>
+            <h2 class="date">2023.07.30</h2>
+          </div>
+          <div class="review-card">
+            <div class="image-section">
+              <img src="./imgs/main-82.png" alt="" />
+              <h2 class="name">박*영</h2>
+            </div>
+            <p class="comment">
+              단가도 좋고 코딩 수준도 높고 무엇보다 빨라서 좋았어요 또
+              이용하겠습니다.
+            </p>
+            <h2 class="date">2023.07.30</h2>
+          </div>
+          <div class="review-card">
+            <div class="image-section">
+              <img src="./imgs/main-86.png" alt="" />
+              <h2 class="name">황*숙</h2>
+            </div>
+            <p class="comment">
+              복잡한 코딩 한번에 해결했어요 너무 감사합니다.
+            </p>
+            <h2 class="date">2023.07.30</h2>
+          </div>
+        </div>
+      </div>
+
+      <!------- feedback right side  ------->
+
+      <div class="feedback-right">
+        <div class="heading">
+          <h3>공지사항</h3>
+          <h4>
+            더보기<span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#666666"
+                stroke-width="2"
+                stroke-linecap="square"
+                stroke-linejoin="round">
+                <path d="M9 18l6-6-6-6" />
+              </svg>
+            </span>
+          </h4>
+        </div>
+        <hr />
+        <div class="text">
+          <p class="comment">
+            사이트가 새롭게 오픈되었습니다. 사이트가 새롭게 오픈..
+          </p>
+          <h2 class="date">2023.07.30</h2>
+        </div>
+        <hr />
+        <div class="text">
+          <p class="comment">사이트가 새롭게 오픈되었습니다.</p>
+          <h2 class="date">2023.07.30</h2>
+        </div>
+        <hr />
+        <div class="text">
+          <p class="comment">안드로이드 지원 중단 버전 안내</p>
+          <h2 class="date">2023.07.30</h2>
+        </div>
+        <hr />
+      </div>
+    </section>
+
+    <!--------------------- footer section  --------------------->
+    <hr />
+    <section id="footer">
+      <section id="footer">
+        <p>서울 금천구 가산디지털1로 5대륭테크노타운20차 402호 TEL:1644-5805</p>
+        <p>
+          사업자등록번호:113-86-13483 통신판매번호 : 구로 제 2008-00086호 대표 :
+          문양희 개인정보관리책임자 : 조원호
+        </p>
+        <p class="copyRight">Copyright @ 2008 타고플러스 All Right Reserved</p>
+      </section>
+    </section>
+
+    
+
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1087,3 +1087,21 @@ body {
     font-size: 10px;
   }
 }
+
+/*--------------------- overall margin ---------------------*/
+@media only screen and (min-width: 1300px) {
+  #navbar #navbar-container  {
+    width: 80%;
+    margin: 0 auto;
+  }
+  #progress , #projects , #project-intro , #youtube-section .content-container , #feedback-container {
+    width: 80%;
+    margin: 50px auto;
+  }
+}
+
+/*--------------------- button styles ---------------------*/
+
+.navbar-buttons button {
+ filter: drop-shadow(2px 2px 4px #000);
+}
